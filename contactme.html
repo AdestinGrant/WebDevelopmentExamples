@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body onload="generateNav(3)">
+    <nav id="contactNav"></nav>
+
+    <form action="http://ss1.ciwcertified.com/cgi-bin/process.pl" onsubmit="return validateSubmission()" novalidate>
+
+        <label for="fname">First Name:</label>  <br>
+        <input type="text" id="fname">
+        <br>
+        <label for="lname">Last Name:</label>   <br>
+        <input type="text" id="lname">
+        <br>
+        <label for="email">Email:</label>  <br>
+        <input oninput="validate()" type="email" id="email"> <p id="emailValidate"></p>
+        <br>
+        <label for="calendar">Date:</label> <br>
+        <input type="date" id="calendar">
+        <br>
+        <label for="pwd">Password:</label>  <br>
+        <input oninput="pwdStr()" type="password" id="pwd"> <p id="PwdStrength"></p>
+        <br>
+        <label for="comments">Comments:</label> <br>
+        <textarea oninput="countChar()" maxlength="500" id="comments" rows="10" cols="50"></textarea>
+        <p id="RunningCount">0/500</p>
+        <br>
+        <input type="submit" value="Submit">
+ 
+    </form>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sound Design</title>
+    <script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+    <script src="script.js"></script>    
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body onload="generateNav(4)">
+    <nav id="musicNav"></nav>
+
+    <div id="AudioDiv">
+        <h2>Snow</h2>
+        <audio onplay='onPlay(0)' onpause="onPause()" controls>
+        <source src="snow.mp3" type="audio/mpeg">
+        </audio>
+
+        <h2>U Kno</h2>
+        <audio onplay='onPlay(1)' onpause="onPause()" controls>   
+        <source src="u_kno.mp3" type="audio/mpeg">
+        </audio>
+
+        <h2>Zoned</h2>
+        <audio onplay='onPlay(2)' onpause="onPause()" controls>    
+        <source src="zoned.wav" type="audio/wav">
+        </audio>    
+
+        <h2>Study</h2>
+        <audio onplay='onPlay(3)' onpause="onPause()" controls>
+        <source src="study.mp3" type="audio/mp3">
+        </audio>
+    </div>
+</body>
+</html>
